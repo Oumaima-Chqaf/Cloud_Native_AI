@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Predict Diabetes</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='C:\\Users\\Oum\\PycharmProjects\\MLOPs_Lab1\\venv\\Scripts\\style.css') }}">
+</head>
+
+<body>
+    <h1>Diabetes Prediction Form</h1>
+    <form action="{{ url_for('predict') }}" method="post">
+        <label for="preg">Number of times pregnant:</label>
+        <input type="text" id="preg" name="preg" required><br>
+
+        <label for="plas">Plasma glucose concentration:</label>
+        <input type="text" id="plas" name="plas" required><br>
+
+        <label for="pres">Diastolic blood pressure:</label>
+        <input type="text" id="pres" name="pres" required><br>
+
+        <label for="skin">Triceps skinfold thickness:</label>
+        <input type="text" id="skin" name="skin" required><br>
+
+        <label for="test">2-Hour serum insulin:</label>
+        <input type="text" id="test" name="test" required><br>
+
+        <label for="mass">Body mass index:</label>
+        <input type="text" id="mass" name="mass" required><br>
+
+        <label for="pedi">Diabetes pedigree function:</label>
+        <input type="text" id="pedi" name="pedi" required><br>
+
+        <label for="age">Age:</label>
+        <input type="text" id="age" name="age" required><br>
+
+        <input type="submit" value="Predict">
+    </form>
+    <p>Diabetic</p>
+{{ prediction_text }}
+</body>
+
+</html>
